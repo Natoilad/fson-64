@@ -2,10 +2,10 @@
   "name": "fson-64-al-team",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://olexandryakowenko.github.io/fson-64-al-team",
+  "homepage": "https://natoilad.github.io/fson-64",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /fson-64-al-team/"
+    "build": "parcel build src/*.html --public-url /fson-64/"
   },
   "repository": {
     "type": "git",
