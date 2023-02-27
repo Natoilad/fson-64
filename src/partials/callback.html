@@ -4,14 +4,49 @@
   <form class="callback-form">
     <h2 class="callback-title">Request Callback</h2>
 
-    <label class="form-label"><span class="label-name">Name</span>
-      <input placeholder="Enter your name" class="form-input" type="text" id="user-name" name="user-name" />
+    <label class="form-label"
+      ><span class="label-name">Name</span>
+      <input
+        id="name"
+        placeholder="Enter your name"
+        class="form-input"
+        type="text"
+        id="user-name"
+        name="user-name"
+      />
     </label>
 
     <label class="label-name" for="user-email">Email</label>
-    <input required placeholder="Enter email*" class="form-input form-input-email" type="email" name="user-email"
-      id="user-email" />
+    <input
+      id="email"
+      required
+      placeholder="Enter email*"
+      class="form-input form-input-email"
+      type="email"
+      name="user-email"
+      id="user-email"
+    />
 
-    <button class="btn-callback" type="submit">Send</button>
+    <button class="btn-callback" type="submit" onclick="sendEmail()">
+      Send
+    </button>
   </form>
+  <script>
+    function sendEmail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      console.log('hello');
+      Email.send({
+        Host: 'smtp.gmail.com',
+        Username: 'your_email@gmail.com', // Ваша адреса електронної пошти
+        Password: 'your_password', // Пароль для доступу до поштового акаунту
+        To: 'example@example.com', // Адреса електронної пошти отримувача
+        From: 'your_email@gmail.com', // Ваша адреса електронної пошти
+        Subject: "Запит з форми зворотнього зв'язку",
+        Body: "Ім'я: " + name + '<br>Електронна адреса: ' + email,
+      }).then(function (message) {
+        alert('Повідомлення успішно відправлено.');
+      });
+    }
+  </script>
 </section>
