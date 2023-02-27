@@ -1,22 +1,15 @@
 export function sendEmail() {
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-
+  console.log('hello');
   Email.send({
     Host: 'smtp.gmail.com',
-    Username: 'your_email@gmail.com', // Ваша адреса електронної пошти
-    Password: 'your_password', // Пароль для доступу до поштового акаунту
-    To: 'example@example.com', // Адреса електронної пошти отримувача
-    From: 'your_email@gmail.com', // Ваша адреса електронної пошти
+    Username: 'grayreference@gmail.com', // Ваша адреса електронної пошти
+    Password: 'Qwerty123qazwsx', // Пароль для доступу до поштового акаунту
+    To: 'sergey_naftusya@ukr.net', // Адреса електронної пошти отримувача
+    From: 'grayreference@gmail.com', // Ваша адреса електронної пошти
     Subject: "Запит з форми зворотнього зв'язку",
-    Body:
-      "Ім'я: " +
-      name +
-      '<br>Електронна адреса: ' +
-      email +
-      '<br>Повідомлення: ' +
-      message,
+    Body: "Ім'я: " + name + '<br>Електронна адреса: ' + email,
   }).then(function (message) {
     alert('Повідомлення успішно відправлено.');
   });

@@ -31,9 +31,10 @@
   </form>
   <script>
     function sendEmail() {
+      event.preventDefault();
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
-      console.log('hello');
+
       Email.send({
         Host: 'smtp.gmail.com',
         Username: 'grayreference@gmail.com', // Ваша адреса електронної пошти
@@ -43,8 +44,10 @@
         Subject: "Запит з форми зворотнього зв'язку",
         Body: "Ім'я: " + name + '<br>Електронна адреса: ' + email,
       }).then(function (message) {
-        alert('Повідомлення успішно відправлено.');
+        alert('Повідомлення успішно відправлено. TEST');
       });
+      console.log('hello');
     }
   </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </section>
