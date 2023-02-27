@@ -27,9 +27,7 @@
       id="user-email"
     />
 
-    <button class="btn-callback" type="submit" onclick="sendEmail()">
-      Send
-    </button>
+    <button class="btn-callback" onclick="sendEmail()">Send</button>
   </form>
   <script>
     function sendEmail() {
@@ -38,10 +36,10 @@
       console.log('hello');
       Email.send({
         Host: 'smtp.gmail.com',
-        Username: 'your_email@gmail.com', // Ваша адреса електронної пошти
-        Password: 'your_password', // Пароль для доступу до поштового акаунту
-        To: 'example@example.com', // Адреса електронної пошти отримувача
-        From: 'your_email@gmail.com', // Ваша адреса електронної пошти
+        Username: 'grayreference@gmail.com', // Ваша адреса електронної пошти
+        Password: 'Qwerty123qazwsx', // Пароль для доступу до поштового акаунту
+        To: 'sergey_naftusya@ukr.net', // Адреса електронної пошти отримувача
+        From: 'grayreference@gmail.com', // Ваша адреса електронної пошти
         Subject: "Запит з форми зворотнього зв'язку",
         Body: "Ім'я: " + name + '<br>Електронна адреса: ' + email,
       }).then(function (message) {
