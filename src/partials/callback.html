@@ -36,11 +36,11 @@
       var email = document.getElementById('email').value;
 
       Email.send({
-        Host: 'smtp.gmail.com',
-        Username: 'grayreference@gmail.com', // Ваша адреса електронної пошти
-        Password: 'Qwerty123qazwsx', // Пароль для доступу до поштового акаунту
-        To: 'sergey_naftusya@ukr.net', // Адреса електронної пошти отримувача
-        From: 'grayreference@gmail.com', // Ваша адреса електронної пошти
+        Host: 'smtp.ukr.net',
+        Username: 'sergey_naftusya@ukr.net', // Ваша адреса електронної пошти
+        Password: 'v81KlIctGzlM7txP', // Пароль для доступу до поштового акаунту
+        To: 'grayreference@gmail.com', // Адреса електронної пошти отримувача
+        From: 'sergey_naftusya@ukr.net', // Ваша адреса електронної пошти
         Subject: "Запит з форми зворотнього зв'язку",
         Body: "Ім'я: " + name + '<br>Електронна адреса: ' + email,
       }).then(function (message) {
